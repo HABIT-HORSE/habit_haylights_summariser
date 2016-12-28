@@ -203,7 +203,8 @@ def processVideoFrameByFrame(video_capture, filename):
 			When the inner variable is appended to (B.append (" has run away"), then the outer variable also changes to "cat has run away".
             '''
             
-            if frameDectionStatus == False or frame_flippedDectionStatus == False:
+            #if frameDectionStatus == False or frame_flippedDectionStatus == False:
+            if frameDectionStatus == True or frame_flippedDectionStatus == True:
 			# if exampleDetector(frame, "unflipped", logTimeStamp): # how to add a different detector, instead of Haar Cascades
 		###############################  End detecting... ###############################################	
 
