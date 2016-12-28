@@ -1,0 +1,35 @@
+processing...short_test (1).avi
+
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+Recording...
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:00 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:01 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:01 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:01 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:01 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:01 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:01 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:01 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
+00:00:01 - habit_haar_cascade_horse_ears_1: target detected (unflipped)!
