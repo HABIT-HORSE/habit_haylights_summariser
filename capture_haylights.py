@@ -49,8 +49,8 @@ ap.set_defaults(promptCodec=False)
 ap.add_argument("--outFileExt", default="avi", help="Output video file extension.")
 ap.add_argument("--outFileCodec", default="XVID", help="Output video file codec.")
 ap.add_argument("--outFileFPS", default=10, type=int, help="Output video file FPS.") # Warning: if the frame rate is higher than the hardware can handle, then the video clip appears speeded up.
-ap.add_argument("--maxNumberOfConsecNonDectectFramesBeforeStopRecording", type=int, default=64, help="When recording, the maximum number of consecutive frames without object detection, before recording stops.")
-ap.add_argument("--maxNumberOfConsecDectectFramesBeforeStartRecording", type=int, default=32, help="The maximum number of consecutive frames where the target object is detected, before recording is started.")
+ap.add_argument("--maxNumberOfConsecNonDectectFramesBeforeStopRecording", type=int, default=25, help="When recording, the maximum number of consecutive frames without object detection, before recording stops.")
+ap.add_argument("--maxNumberOfConsecDectectFramesBeforeStartRecording", type=int, default=50, help="The maximum number of consecutive frames where the target object is detected, before recording is started.")
 
 args = vars(ap.parse_args())
 
@@ -159,8 +159,11 @@ def processVideoFrameByFrame(video_capture, filename):
     fourcc = cv2.cv.CV_FOURCC(*args["outFileCodec"])
 	
     timestamp = datetime.datetime.now()
+
+	# consecutive number of frames that *have* contained the target object
+    currentNumberOfConsecDectectFrames = 0
 	
-    # consecutive number of frames that have *not* contained any action
+    # consecutive number of frames that have *not* contained the target object
     currentNumberOfConsecNonDectectFrames = 0
 
     # loop through video frame by frame
@@ -210,10 +213,16 @@ def processVideoFrameByFrame(video_capture, filename):
 
 
 			    #print('target detected!')
-				# reset the number of consecutive frames with *no* action to zero 
+				# reset the number of consecutive frames with *no* detection to zero 
 				currentNumberOfConsecNonDectectFrames = 0
+				
+				currentNumberOfConsecDectectFrames = currentNumberOfConsecDectectFrames + 1
+				
+				
+				
 				# if we are not already recording, start recording
-				if recording == False:
+				# if recording == False:
+				if recording == False and currentNumberOfConsecDectectFrames > args["maxNumberOfConsecDectectFramesBeforeStartRecording"]:
 						timestamp = datetime.datetime.now()
 						#p = "{}/{}.avi".format(args["output"],timestamp.strftime("%Y%m%d-%H%M%S"))
 						# start recording...
@@ -236,6 +245,7 @@ def processVideoFrameByFrame(video_capture, filename):
 			# no action
             else:
 				currentNumberOfConsecNonDectectFrames = currentNumberOfConsecNonDectectFrames + 1
+				currentNumberOfConsecDectectFrames = 0
 				#print('nothing in frame')
 				
 			#print (currentNumberOfConsecNonDectectFrames)

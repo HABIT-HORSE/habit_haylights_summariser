@@ -47,18 +47,9 @@ capture_haylights.py --useInputFiles --showVideo --doFlipFrame --dontPromptCodec
 
 TO DO:
 
-1. Implement command line argument: --maxNumberOfConsecDectectFramesBeforeStartRecording (default=32): The maximum number of consecutive frames where the target object is detected, before recording is started. The parsing is in place, but it is not currently used for anything. 
+1. Fix for input / output MP4 files. Currently, this only works to input / output .AVI / XVID format videos. This is probably because the correct codecs need installing (?). For MP4 files, I tried codec (fourcc) settings: 'H264', 'X264', 'mp4v', 'MJPG' and 'avc1'. None of these works. Note: run with --doPromptCodec switch (default = False) to see installed codecs.
 
-2. Fix for input / output MP4 files. Currently, this only works to input / output .AVI / XVID format videos. This is probably because the correct codecs need installing (?). For MP4 files, I tried codec (fourcc) settings: 'H264', 'X264', 'mp4v', 'MJPG' and 'avc1'. None of these works. Note: run with --doPromptCodec switch (default = False) to see installed codecs.
+2. Longer term - add an 'activity' parameter? So, that only clips are saved that exceed a specified level of movement within a sequential series of frames. This is intended to filter out active behaviours from long videos, where horses are consistently on screen, but are inactive.
 
-3. Longer term - add an 'activity' parameter? So, that only clips are saved that exceed a specified level of movement within a sequential series of frames. This is intended to filter out active behaviours from long videos, where horses are consistently on screen, but are inactive.
-
-4. On some systems (my Windows 7 Desktop...), Xvid keeps opening a status window whenever the app starts to record videos.
-I tried to disable this, as follows:
-Start > All programs > Xvid > Configure Encoder.
-Click Load Options.
-Untick Display encoding status. 
-This option was not present on my system.
-So I tried running: rundll32.exe xvid.ax,Configure
-This failed with: "There was a problem starting xvid.ax. The specified module could not be found."
+3. Consider using threads when running multiple Haar Cascades, to speed things up a bit.
 
